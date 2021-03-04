@@ -15,12 +15,10 @@ func newCard() string {
 }
 
 func array() {
-	cards := []string{newCard(), "Five of diamonds"}
+	cards := deck{newCard(), "Five of diamonds"}
 	cards = append(cards, "Six of spades")
 
-	for _, card := range cards {
-		fmt.Println(card)
-	}
+	cards.print()
 
 	fmt.Println(cards)
 }
